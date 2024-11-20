@@ -14,11 +14,8 @@ function computePrice(lowVatPrices, highVatPrices) {
   }
 
   for (let price of highVatPrices) {
-    total += computeVat(price, 1.2);
+    total += computeVat(price);
   }
 
   return total;
 }
-console.log(computePrice([10, 15], [20]));
-console.log(computePrice([13], [20, 50, 8]));
-console.log(computePrice([20], [20]));
